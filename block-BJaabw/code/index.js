@@ -30,8 +30,8 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
- 
+function isInRange(lower, upper, number) {
+ return number > lower && num < upper;
 }
 // - Execute the function with required parameter
 
@@ -54,18 +54,16 @@ Obese: BMI is 30 or more
 */
 
 function calculateBMI(weight,height) {
-  let BMI = (weight / (height * height));
+  let BMI = weight / (height * height);
   if(BMI < 18.5) {
     return "UnderWeight";
-  }else if(BMI >= 18.5 && BMI <= 24.9) {
+  }else if(BMI > 18.5 && BMI < 24.9) {
     return "Normal Weight";
-  } else if(BMI >= 25 |&& BMI <= 29.9) {
+  } else if(BMI > 25 && BMI < 29.9) {
     return "OverWeight";
   } else if (BMI >= 30) {
     return "Obese";
   }
-  
-
 }
 
 /* 4. appropiateDrinks
@@ -103,7 +101,13 @@ Twist is when user passes anything other than number, or string value you should
 */
 
 function sum(num1,num2) {
-  if()
+  if(typeof num1 == "number" && typeof num2 == "number") {
+    return num1 + num2;
+  } else if(typeof num1 == "string" && typeof num2 == "string") {
+    return num1 + num2;
+  } else {
+    return `Enter valid input`;
+  }
 } 
 
 // Function Test
