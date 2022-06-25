@@ -71,6 +71,14 @@ for(let i = 1; i <= 10; i++){
 getTable(); 
 
 
+function getTable () {
+  let num = +prompt("Enter the table");
+  for(let v = 1; v <= 10; v++);{
+  console.log(`${num} * ${v} = ${num * v}`);
+  }
+}
+getTable();
+
 /*
 5. Create a function named `isLeapYear` with the following steps:
 
@@ -81,7 +89,7 @@ getTable();
 
 function isLeapYear() {
   let year = +prompt("Enter the year");
-  if (year % 4 === 0 && year % 400 === 0) {
+  if (year % 4 === 0 || year % 400 === 0) {
     alert(`${year} is a leap year`);
 
   } else if(year % 100 === 0){
@@ -104,13 +112,19 @@ isLeapYear();
 
 */
 
-function getFactorial() {
-  let number = +prompt("Enter a number");
-  let factorial = 1;
-  for(let i=1; i<= number; i++){
-     factorial = factorial *i;
-  }
-  alert(`The Factorial of ${number} is ${factorial}`);
-}
+function isLeapYear() {
+  let year = +prompt("Enter the year");
+  if (year % 400 === 0 ) {
+    alert(`${year} is a leap year`);
+  }else if(year % 100 === 0){
+    alert(`${year} is not a leap year`);
+  } else if(year % 4 === 0){
+    alert(`${year} is a leap year`);
 
-getFactorial();
+  } else {
+    alert(`${year} is not a leap year`);
+  }
+
+}
+isLeapYear();
+
